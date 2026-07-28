@@ -396,7 +396,7 @@ def register_user():
             return jsonify({"Error": "This user already exists"})
         return jsonify({"Error": f"Could not register user due to - {e.msg}"})
     
-@app.route("/login", methods=['GET'])
+@app.route("/login", methods=['POST'])
 def login():
     data =  request.get_json()
     con = get_db()
