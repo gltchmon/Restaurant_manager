@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>219</width>
+    <height>216</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="bottomMargin">
+    <number>5</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Select year:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="year_dialog_select_year_spinBox">
+       <property name="minimum">
+        <number>2000</number>
+       </property>
+       <property name="maximum">
+        <number>2026</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Choose how to display:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="year_dialog_monthly_radioButton">
+     <property name="text">
+      <string>Monthly Sales</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">year_dialog_display_optionGroup</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="year_dialog_daily_radioButton">
+     <property name="text">
+      <string>Daily sales </string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">year_dialog_display_optionGroup</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="year_dialog_weekly_radioButton">
+     <property name="text">
+      <string>Weekly sales</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">year_dialog_display_optionGroup</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="year_dialog_view_all_radioButton">
+     <property name="text">
+      <string>View all sales</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">year_dialog_display_optionGroup</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="year_dialog_okButton">
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="year_dialog_display_optionGroup"/>
+ </buttongroups>
+</ui>

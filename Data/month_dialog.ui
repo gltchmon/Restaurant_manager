@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>381</width>
+    <height>254</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Select month:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="month_dialog_month_spinBox">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>12</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Select year (if not selected all years are displayed):</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="month_dialog_year_spinBox">
+       <property name="minimum">
+        <number>2000</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Select display options:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="month_dialog_view_all_radioButton">
+     <property name="text">
+      <string>View all sales </string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">month_dialog_display_option_group</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="month_dialog_day_radioButton">
+     <property name="text">
+      <string>View by day</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">month_dialog_display_option_group</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="month_dialog_week_radioButton">
+     <property name="text">
+      <string>View by week</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">month_dialog_display_option_group</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="month_dialog_total_radioButton">
+     <property name="text">
+      <string>View month total</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">month_dialog_display_option_group</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="month_dialog_ok_button">
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="month_dialog_display_option_group"/>
+ </buttongroups>
+</ui>

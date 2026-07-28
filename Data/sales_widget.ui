@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>manage_sales_widget</class>
+ <widget class="QWidget" name="manage_sales_widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>428</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="manage_sales_tabWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>View sales</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="view_sales_search_button">
+           <property name="text">
+            <string>Search by </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="view_sales_daily_button">
+           <property name="text">
+            <string>View daily sales</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="view_sales_monthly_button">
+           <property name="text">
+            <string>View monthly sales</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="view_sales_yearly_sales">
+           <property name="text">
+            <string>View yearly sales</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="view_sales_tableWidget">
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>191</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Date</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Item</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Amount</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="view_sales_delete_button">
+         <property name="text">
+          <string>Delete selected sales </string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Add sales</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Date:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateEdit" name="add_sales_date"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Item name:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="add_sales_item_name_comboBox"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Amount Sold:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="add_sales_amount_sold_spinBox"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Total:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="add_sales_total_spinBox"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="add_sales_confirm_button">
+           <property name="styleSheet">
+            <string notr="true">height:50px;</string>
+           </property>
+           <property name="text">
+            <string>Confirm entry</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QListWidget" name="add_sales_listWidget"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="add_sales_delete_button">
+         <property name="text">
+          <string>Delete selected sales</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="add_sales_submit_button">
+         <property name="text">
+          <string>Submit sales</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

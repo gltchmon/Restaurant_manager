@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>857</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="manage_sales_page">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QTabWidget" name="manage_sales_tabWidget">
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="view_sales_tab">
+           <attribute name="title">
+            <string>View sales</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QPushButton" name="view_sales_search_button">
+                <property name="text">
+                 <string>Search by</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="view_sales_daily_button">
+                <property name="text">
+                 <string>View daily sales</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="view_sales_monthly_button">
+                <property name="text">
+                 <string>View monthly sales</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="view_sales_yearly_button">
+                <property name="text">
+                 <string>View yearly sales</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="view_sales_table">
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>199</number>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>Date</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                </font>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Item</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                </font>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Amount</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                </font>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Total</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                </font>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="view_sales_delete_sales_button">
+              <property name="text">
+               <string>Delete selected sales</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="add_sales_tab">
+           <attribute name="title">
+            <string>Add sales</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_17">
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>Date:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDateEdit" name="add_sales_date"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <widget class="QLabel" name="label_2">
+                  <property name="text">
+                   <string>Item name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="add_sales_item_name_comboBox"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <widget class="QLabel" name="label_3">
+                  <property name="text">
+                   <string>Amount sold:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="add_sales_amount_sold_spinBox"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <widget class="QLabel" name="label_4">
+                  <property name="text">
+                   <string>Total:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDoubleSpinBox" name="add_sales_total_spinBox"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QPushButton" name="add_sales_confirm_button">
+                <property name="styleSheet">
+                 <string notr="true">font-size:10pt;</string>
+                </property>
+                <property name="text">
+                 <string>Confirm entry</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QListWidget" name="add_sales_list"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="add_sales_delete_button">
+              <property name="text">
+               <string>Delete selected sales</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="add_sales_submit_button">
+              <property name="text">
+               <string>Submit sales</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="add_menu_page">
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="styleSheet">
+           <string notr="true">font-size:18pt;</string>
+          </property>
+          <property name="text">
+           <string>Add/Remove menu Item:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Item name:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="add_menu_item_name">
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>Price:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="add_menu_item_price"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="add_menu_item_add_button">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="add_menu_item_list"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="add_menu_item_delete_button">
+          <property name="text">
+           <string>Delete selected items</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="manage_expenses_page">
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QTabWidget" name="expenses_tabWidget">
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="view_expenses_tab">
+           <attribute name="title">
+            <string>View expenses</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QPushButton" name="view_expenses_search_button">
+                <property name="text">
+                 <string>Search by</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="view_expenses_daily_button">
+                <property name="text">
+                 <string>View daily expenses</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="view_expenses_weekly_button">
+                <property name="text">
+                 <string>View weekly expenses</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="view_expenses_monthly_button">
+                <property name="text">
+                 <string>View monthly expenses</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="view_expenses_yearly_button">
+                <property name="text">
+                 <string>View yearly expenses</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="view_expenses_table">
+              <property name="rowCount">
+               <number>0</number>
+              </property>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>265</number>
+              </attribute>
+              <attribute name="verticalHeaderHighlightSections">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+               <bool>false</bool>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>Date</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Expense type</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Amount spent</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="view_expenses_delete_button">
+              <property name="text">
+               <string>Delete selected expenses</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="add_expenses_tab">
+           <attribute name="title">
+            <string>Add expenses</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_15">
+                <item>
+                 <widget class="QLabel" name="label_11">
+                  <property name="text">
+                   <string>Date:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDateEdit" name="add_expenses_date"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_12">
+                <item>
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>Expense Type:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="add_expenses_expense_type_comboBox"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_13">
+                <item>
+                 <widget class="QLabel" name="label_12">
+                  <property name="text">
+                   <string>Amount spent:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDoubleSpinBox" name="add_expenses_amount_spent_spinBox"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QPushButton" name="add_expenses_add_button">
+                <property name="text">
+                 <string>Add expense</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QListWidget" name="add_expenses_list"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="add_expenses_delete_button">
+              <property name="text">
+               <string>Delete selected expenses</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="add_expenses_submit_button">
+              <property name="text">
+               <string>Submit expenses</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="view_expenses_sales_tab">
+           <attribute name="title">
+            <string>View expenses with sales</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_16">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <item>
+               <widget class="QPushButton" name="search_by_expense_sales_button">
+                <property name="text">
+                 <string>Search by</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="daily_expense_sale_button">
+                <property name="text">
+                 <string>Daily</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="weekly_expense_sale_button">
+                <property name="text">
+                 <string>Weekly</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="yearly_expense_sale_button">
+                <property name="text">
+                 <string>Yearly</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="monthly_expense_sale_button">
+                <property name="text">
+                 <string>Monthly</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="expense_sales_table">
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>198</number>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>Date</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Expense total</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Sales total</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Total</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="manage_account_page">
+       <layout class="QVBoxLayout" name="verticalLayout_18">
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="styleSheet">
+           <string notr="true">font-size:18pt;</string>
+          </property>
+          <property name="text">
+           <string>Manage Account</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>Change restaurant name:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="manage_account_change_restaurant_name_line_edit"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>Change password:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="manage_account_change_password_line_edit"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="manage_account_change_password_button">
+            <property name="text">
+             <string>Change Password</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="manage_account_change_restaurant_name_button">
+            <property name="text">
+             <string>Change name</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>857</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuView_Sales">
+    <property name="title">
+     <string>Sales</string>
+    </property>
+    <addaction name="actionView_Sales"/>
+    <addaction name="actionAdd_sale"/>
+   </widget>
+   <widget class="QMenu" name="menuAdd_menu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionManage_menu"/>
+   </widget>
+   <widget class="QMenu" name="menuAccount">
+    <property name="title">
+     <string>Account</string>
+    </property>
+    <addaction name="actionLog_out"/>
+    <addaction name="actionChange_details"/>
+   </widget>
+   <widget class="QMenu" name="menuExpenses">
+    <property name="title">
+     <string>Expenses</string>
+    </property>
+    <addaction name="actionView_expenses"/>
+    <addaction name="actionAdd_expenses"/>
+   </widget>
+   <addaction name="menuView_Sales"/>
+   <addaction name="menuAdd_menu"/>
+   <addaction name="menuExpenses"/>
+   <addaction name="menuAccount"/>
+  </widget>
+  <action name="actionLog_out">
+   <property name="text">
+    <string>Log out</string>
+   </property>
+  </action>
+  <action name="actionChange_details">
+   <property name="text">
+    <string>Manage account</string>
+   </property>
+  </action>
+  <action name="actionChange_name">
+   <property name="text">
+    <string>Change name</string>
+   </property>
+  </action>
+  <action name="actionView_Sales">
+   <property name="text">
+    <string>View Sales</string>
+   </property>
+  </action>
+  <action name="actionAdd_sale">
+   <property name="text">
+    <string>Add sales</string>
+   </property>
+  </action>
+  <action name="actionManage_menu">
+   <property name="text">
+    <string>Manage menu</string>
+   </property>
+  </action>
+  <action name="actionAdd_expenses">
+   <property name="text">
+    <string>Add expenses</string>
+   </property>
+  </action>
+  <action name="actionView_expenses">
+   <property name="text">
+    <string>View expenses</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
