@@ -1,3 +1,4 @@
 .env
 .venv
 Flask_API/ca.pem
+__pycache__

@@ -42,7 +42,7 @@ db_pool =  pooling.MySQLConnectionPool(
 # database needs to close connections and only allow the flask api to communicate with it 
 @app.route("/")
 def home():
-    return jsonify({"execute queries": "Home"})
+    return "Homepage"
 
 @app.route("/get_tables", methods=['GET'])
 def get_tables():
