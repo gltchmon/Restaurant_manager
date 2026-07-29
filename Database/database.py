@@ -1,15 +1,27 @@
 import mysql.connector
 import csv
 from decimal import *
+import os
+from dotenv import find_dotenv, load_dotenv
+
+dotenv_path = find_dotenv()
+load_dotenv(dotenv_path)
+
+# load environment files
+db_host = os.getenv("host")
+db_username= os.getenv("user")
+db_pass = os.getenv("passwd")
+db_database = os.getenv("database")
 
 
 class Database:
+
     def __init__(self):
         self.db = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            passwd="Scaramouche66@",
-            database = "restaurant_sales"
+            host=db_host,
+            user=db_username,
+            passwd=db_pass,
+            database = db_database
         )
         self.cursor = self.db.cursor()
         #print(self.get_price("Bacon egg and sausage baguette"))

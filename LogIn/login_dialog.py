@@ -3,7 +3,6 @@ from PySide6.QtWidgets import (QDialog, QPushButton, QApplication, QGridLayout, 
 from Database.database import Database
 from Sales.sales_widget import SalesWidget
 import requests
-from Flask_API import app
 
 
 
