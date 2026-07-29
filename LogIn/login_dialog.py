@@ -3,6 +3,7 @@ from PySide6.QtWidgets import (QDialog, QPushButton, QApplication, QGridLayout, 
 from Database.database import Database
 from Sales.sales_widget import SalesWidget
 import requests
+import json
 
 
 
@@ -49,7 +50,16 @@ class LoginDialog(QDialog):
             "code": restaurant_code,
             "password" : password
         }
-        print(requests.get(flask_url,data))
+        response = requests.post(flask_url, json =data)
+        res = response.json()
+        if 'restaurant_id' in res:
+            self.sales_widget = SalesWidget(res['restaurant_id'])
+            self.sales_widget.show()
+            self.close()
+        else:
+            QMessageBox.critical(None, "Error logging in",
+            f"{res['Error']}",
+            QMessageBox.StandardButton.Ok)
 
         """
         # get password
@@ -67,4 +77,4 @@ class LoginDialog(QDialog):
                                  QMessageBox.StandardButton.Ok)
         """
     def get_api_url(self,route):
-        return f"http://127.0.0.1:5000/{route}"
+        return f"https://restaurant-sales-manager-api-bss5.onrender.com/{route}"
